@@ -11,9 +11,11 @@ while respuesta != numero:
     if respuesta < numero:
             print("Te has quedado corto")
             respuesta = int (input('Escriba otro numero entre 0 y 99: '))
-    else:
+    if respuesta > numero:
             print("Te has pasado")
             respuesta = int (input('Escriba otro numero entre 0 y 99: '))
+    else:
+        intentos -= 1
     intentos += 1
 else:
     print("Enhorabuema, lo has acertado")
